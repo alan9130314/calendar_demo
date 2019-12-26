@@ -1,0 +1,133 @@
+#calendar  {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#header{
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.day, .date-block {
+    float: left;
+    width: calc(100% / 7);
+
+}
+
+#dates{
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.date-block{
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 4px;
+    height: 15vh;
+    overflow: auto;
+}
+
+.date-block.empty{
+    background-color: #ddd;
+}
+
+.event{
+    margin-bottom: 2px;
+    border-radius: 12px;
+    padding: 0 6px;
+    background-color: rgb(255, 168, 96);
+    color: #fff;
+}
+
+.event .title{
+    float: left;
+}
+
+.event .from{
+    float: right;
+}
+
+
+/*info-panel*/
+#info-panel{
+    display: none;
+    position: fixed;
+    width: 280px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+#info-panel.open{
+    display: block;
+}
+
+
+#info-panel .close{
+    position: relative;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+#info-panel label{
+    font-size: .8rem;
+    color: #aaa;
+}
+
+#info-panel .title, #info-panel .time-picker{
+    border-bottom: 1px solid #ccc;
+}
+
+#info-panel .title,
+#info-panel .time-picker,
+#info-panel .description{
+    padding: 10px;
+}
+
+.error-msg{
+    display: none;
+}
+.error-msg.open{
+    display: block;
+}
+
+.selected-date {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+#description{
+    width: 100%;
+}
+
+#info-panel button{
+    display: none;
+    border: none;
+    padding: 10px;
+    color: white;
+    background-color: rgb(172, 172, 172);
+    cursor: pointer;
+}
+
+#info-panel.new button.create,
+#info-panel.new button.cancel {
+    float: left;
+    display: block;
+    width: 50%;
+}
+
+#info-panel.update button.update,
+#info-panel.update button.cancel,
+#info-panel.update button.delete {
+    float: left;
+    display: block;
+    width: 50%;
+}
+
+#info-panel button.create,
+#info-panel button.update{
+    background-color: rgb(97, 184, 75);
+}
+
+#info-panel.update button.delete{
+    width: 100%;
+    background-color: rgb(219, 78, 78);
+}
